@@ -2,7 +2,7 @@ import Logo from "../heplers/img/Header/Logo.png";
 import Phone from "../heplers/img/Header/Phone.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneVolume, faBars, faX } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 function Header() {
   const dataMenu =[
     {
@@ -38,29 +38,45 @@ function Header() {
   const [isAnimating,setIsAnimating]=useState(false);
   const openMenu=()=>{
     setIsOpen(true);
-    setTimeout(()=>setIsAnimating(true),300);
+    setTimeout(()=>setIsAnimating(true));
   }
   const closeMenu=()=>{
     setIsAnimating(false);
-    setTimeout(()=>setIsOpen(false),300);
+    setTimeout(()=>setIsOpen(false),100);
   }
+   const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
-    <div className="w-full 4k:max-w-[75%] sm:max-w-[80%] max-w-[95%] mx-auto fixed top-0 left-0 right-0 z-2">
-      <div className=" flex items-center lg1:justify-around justify-between h-[40px] mt-5">
+    <div className={`w-full  fixed top-0 left-0 right-0 z-3 pb-3 transition-all duration-300 ${
+    isScrolled ? "bg-white shadow-md" : "bg-transparent"
+  }`}>
+      <div className=" flex items-center 4k:max-w-[75%] sm:max-w-[80%] max-w-[95%] mx-auto lg1:justify-around justify-between h-[40px] mt-5">
         <div className="lg:basis-[15%] sm:basis-[30%] basis-[50%]">
           <img src={Logo} alt="Logo" className="w-[80%]" />
         </div>
        <div className="basis-[85%] lg1:flex hidden justify-between items-center lg:text-[12px] lg1:text-[13px] xl:text-[14px] 2xl:text-[16px] 4k:text-[18px]">
         {dataMenu.map((item)=>(
           
-            <div className=" font-bold hover:bg-gradient-to-r hover:from-[#3EED8B] hover:to-[#0A9949] hover:bg-clip-text hover:text-transparent flex items-center relative group">
+            <div className=" font-bold hover:bg-gradient-to-r hover:from-[#3EED8B] transition-all duration-400 ease-in-out hover:to-[#0A9949] hover:bg-clip-text hover:text-transparent flex items-center relative group">
               <a href="#" key={item.id}>{item.menu}
-            <span className="block w-4 h-[3px] absolute  group-hover:bg-gradient-to-br group-hover:from-[#3EED8B] group-hover:to-[#0A9949] opacity-0 group-hover:opacity-100 rounded-md mt-2 left-1/2 translate-x-[-50%]"></span>
+            <span className="block w-4 h-[3px] absolute  group-hover:bg-gradient-to-br transition-all duration-400 ease-in-out group-hover:from-[#3EED8B] group-hover:to-[#0A9949] opacity-0 group-hover:opacity-100 rounded-md mt-2 left-1/2 translate-x-[-50%]"></span>
             </a></div>
           
         ))}
-          <a href="tel:19001806"><div className="bg_button flex gap-2 !font-bold items-center justify-between lg:px-3 lg:py-1.5 px-1.5 py-1"><img src={Phone} alt="Phone" className="bg-white lg:p-1.5 p-0.5  rounded-full"/>Gọi 1900 1806</div></a>
+          <a href="tel:19001806"><div className="bg_button flex gap-2 !font-bold items-center justify-between lg:px-2.5 lg:py-1.5 px-1.5 py-1"><img src={Phone} alt="Phone" className="bg-white lg:p-2 p-0.5  rounded-full"/>Gọi 1900 1806</div></a>
        </div>
        <div className="lg1:hidden mr-4 flex relative"><FontAwesomeIcon icon={faBars} onClick={openMenu} />
                    {isOpen && (

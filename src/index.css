@@ -1,4 +1,11 @@
+@font-face {
+  font-family: Lato;
+  src: url("../src/assets/font/Lato-Regular_2.ttf");
+}
+
 @import "tailwindcss";
+
+
 @theme{
   --breakpoint-*:initial;
   --breakpoint-none: 100%;
@@ -13,4 +20,6 @@
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
   --breakpoint-4k: 1920px;
+
+   --font-latoV:'Lato', 'sans-serif';
 }

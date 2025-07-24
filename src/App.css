@@ -11,10 +11,14 @@
   background-image: linear-gradient(to bottom, var(--main-color-from), var(--main-color-to));
   color: white;
   font-weight: 500;
-
   border-radius: 9999px; /* tương đương rounded-full */
-  transition: background-image 0.3s ease-in-out;
+ transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 .bg_button:hover {
   background-image: linear-gradient(to right, var(--main-color-to), var(--main-color-hover-to));
+}
+.bg_main{
+  background-image: linear-gradient(to right, var(--main-gradient-from), var(--main-gradient-to));
 }
