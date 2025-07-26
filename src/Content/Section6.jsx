@@ -66,7 +66,7 @@ function Section6() {
               // onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
               pagination={{
                 clickable: true,
-                el: '.custom-pagination',
+                el: '.custom-pagination-6',
                 dynamicBullets: true,
                 bulletClass: 'swiper-pagination-bullet',
                 bulletActiveClass: 'swiper-pagination-bullet-active',
@@ -128,8 +128,8 @@ function Section6() {
 
             </Swiper>
             {/* Custom pagination v1*/}
-            <div className=" relative translate-x-[-20px] xl:mt-[-2%] sm:mt-0 mt-3">
-                <div className="custom-pagination swiper-pagination"></div>
+            <div className=" relative translate-x-[-20px] xl:mt-[1%] sm:mt-0 mt-3">
+                <div className="custom-pagination-6 swiper-pagination"></div>
               </div>
             {/* Custom pagi v2 ban gioi han chua fix noi cai hoat anh gioi han, dung tam mac dinh cua swiper*/}
             {/* <div className="flex justify-center gap-2 mt-[-2%] cursor-pointer relative z-[2] transition-all duration-300">

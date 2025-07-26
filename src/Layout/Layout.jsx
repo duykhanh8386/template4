@@ -6,6 +6,7 @@ import Section4 from "../Content/Section4";
 import Section5 from "../Content/Section5";
 import Section6 from "../Content/Section6";
 import Section7 from "../Content/Section7";
+import Section8 from "../Content/Section8";
 
 function Layout(){
   return(
@@ -20,6 +21,7 @@ function Layout(){
     <Section5/>
     <Section6/>
     <Section7/>
+    <Section8/>
     </div>
     
     </>

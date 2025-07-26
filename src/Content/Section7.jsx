@@ -14,7 +14,7 @@ import Bg2 from "../heplers/img/Section7/Bg2.png";
 import Bg3 from "../heplers/img/Section7/Bg3.png";
 import Bg4 from "../heplers/img/Section7/Bg4.png";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import { useEffect, useRef, useState } from "react";
 
 function Section7() {
@@ -107,7 +107,7 @@ function Section7() {
 
           slidesPerView="auto"
 
-          className="!px-0 !pb-0 mt-[3%] "
+          className="!px-0 !pb-[4%] mt-[3%] "
         >
 
           {data.map((data) => (
