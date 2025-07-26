@@ -8,18 +8,29 @@ import { useRef, useState } from "react";
 function Section1() {
   const [phone, setPhone] = useState("");
   const inputRef = useRef(null);
+const [error, setError] = useState(false);
+const handleChange = (e) => {
+  const value = e.target.value;
+  setPhone(value);
 
+  // Nếu không phải số hoặc dài hơn 10 ký tự
+  if (!/^\d*$/.test(value) || value.length > 10) {
+    setError(true);
+  } else {
+    setError(false);
+  }
+};
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const phoneRegex = /^[0-9]{10,11}$/;
+    
+    const phoneRegex = /^[0-9]{10}$/;
     if (!phoneRegex.test(phone)) {
       alert("Số điện thoại không hợp lệ");
       return;
     }
-
-
+   
     alert("Gửi thành công: " + phone);
+    setPhone("")
   };
   const handleClick = () => {
     inputRef.current.focus();
@@ -36,12 +47,14 @@ function Section1() {
         <div className="grid md:grid-cols-2 grid-cols-1 gap-3 self-stretch">
           {/* banner */}
           <div className="md:hidden col-span-1 relative">
-          <div className=" md:hidden col-span-1  bg-gradient-to-l from-[#50C577] justify-center aspect-[1/1] flex items-end to-[#2DBEFC] rounded-tl-[45%] relative z-1 overflow-hidden rounded-br-[45%]">
+          <div className=" md:hidden col-span-1  bg_main justify-center aspect-[1/1] flex items-end  rounded-tl-[45%] relative z-1 overflow-hidden rounded-br-[45%]">
             <img src={LogoBg} alt="Logo" className="absolute inset-0 z-1" />
             <div className="justify-center h-full flex ">
-              <img src={Banner} alt="Banner" className="absolute z-1 h-[90%]  w-auto bottom-0 m-auto items-end" /></div>
+              <img src={Banner} alt="Banner" className="absolute z-1 h-[90%]  w-auto bottom-0 m-auto items-end" />
+            </div>
             
-          </div>{/* decor 2 */}
+          </div>
+          {/* decor 2 */}
              <div className="absolute left-[0%] block md:hidden bottom-[-5%] z-0">
               <img src={Decor2} alt="Decor2" />
             </div>
@@ -62,10 +75,10 @@ function Section1() {
                   type="tel"
                   value={phone}
                   ref={inputRef}
-                  onChange={(e) => setPhone(e.target.value)}
+                  onChange={handleChange}
                   placeholder="Nhập số điện thoại..."
-                  className=" outline-none  text-gray-700 2xl:text-lg  xl:text-lg lg:text-base text-sm placeholder-gray-400 bg-transparent"
-
+                  className={`outline-none 2xl:text-lg xl:text-lg lg:text-base text-sm placeholder-gray-400 bg-transparent 
+    ${error ? 'text-red-500 placeholder-red-400' : 'text-gray-700'}`}
                 />
                   <button type="submit" className=" px-3 lg:py-2 py-1 4k:py-4  text-white  font-bold rounded-full bg-gradient-to-r from-[#3EED8B] to-[#0A9949]
                 2xl:text-lg  xl:text-lg lg:text-base text-sm  cursor-pointer shadow-md hover:opacity-90 transition ">

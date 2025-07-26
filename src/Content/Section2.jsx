@@ -30,7 +30,7 @@ function Section2() {
                 <div className=" text-lg lg:text-xl xl:text-[22px] 2xl:text-4xl 4k:text-[40px] font-bold">Tầm quan trọng của việc sử dụng kính Ortho-K</div>
               </div>
               <div className="col-span-1">
-                <div className="text-gray-600 pt-2.5 opacity-60  text-justify 2xl:text-lg xl:text-lg lg:text-base text-[14px]">Ortho-K (Orthokeratology - tạo hình giác mạc) là phương pháp sử dụng kính áp tròng cứng được thiết kế đặc biệt với mỗi người để định hình tạm thời giác mạc và cải thiện thị lực. Kính Ortho-K thường đeo vào ban đêm để định hình lại bề mặt trước của mắt.</div>
+                <div className="text-gray-600 sm:pt-2.5 pt-0 opacity-60  text-justify 2xl:text-lg xl:text-lg lg:text-base text-[14px]">Ortho-K (Orthokeratology - tạo hình giác mạc) là phương pháp sử dụng kính áp tròng cứng được thiết kế đặc biệt với mỗi người để định hình tạm thời giác mạc và cải thiện thị lực. Kính Ortho-K thường đeo vào ban đêm để định hình lại bề mặt trước của mắt.</div>
                 <div className="text-gray-600 pt-2.5 opacity-60  text-justify 2xl:text-lg xl:text-lg lg:text-base text-[14px]">Nhiều nghiên cứu lâm sàng cho thấy kính Ortho K mang lại hiệu quả trong việc giảm tiến triển tật khúc xạ khoảng 50% ở trẻ và thậm chí một số trẻ có kết quả tốt hơn. Ngoài ra, kính Ortho-K có những ưu điểm sau:</div>
                 <div className="">
                   <div className="flex justify-start items-center mt-[3%] sm:mt-[5%]" onClick={open}>
