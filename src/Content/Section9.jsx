@@ -61,8 +61,8 @@ function Section9() {
   }
   return (
     <>
-      <div className="w-full xl:pb-[2%] 4k:pb-[5%] lg:pb-[1.5%] md:pb-[3%]  flex items-center justify-items-start lg:mt-[5%] mt-[10%]">
-        <img src={Bg} alt="background" className="absolute z-0 " />
+      <div style={{ backgroundImage: `url(${Bg})` }} className="w-full xl:py-[2%]  4k:py-[5%] lg:py-[1.5%] md:py-[3%] bg-cover flex items-center justify-items-start lg:mt-[5%] mt-[10%]">
+        
         {/* Form */}
 
         <div className="4k:w-[37.5%] sm:w-[40%] h-full relative z-[1] 4k:ml-[12.5%] sm:ml-[10%] ml-[2.5%]">
