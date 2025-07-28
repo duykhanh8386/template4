@@ -36,3 +36,19 @@
  background-image: linear-gradient(to right, var(--main-gradient-from), var(--main-gradient-to)) !important; /* Xanh lá */
   width: 60px !important;     
 }
+/* Chrome, Safari, Edge */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+  -webkit-appearance: none;
+}

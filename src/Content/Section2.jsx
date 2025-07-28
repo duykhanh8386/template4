@@ -33,9 +33,9 @@ function Section2() {
                 <div className="text-gray-600 sm:pt-2.5 pt-0 opacity-60  text-justify 2xl:text-lg xl:text-lg lg:text-base text-[14px]">Ortho-K (Orthokeratology - tạo hình giác mạc) là phương pháp sử dụng kính áp tròng cứng được thiết kế đặc biệt với mỗi người để định hình tạm thời giác mạc và cải thiện thị lực. Kính Ortho-K thường đeo vào ban đêm để định hình lại bề mặt trước của mắt.</div>
                 <div className="text-gray-600 pt-2.5 opacity-60  text-justify 2xl:text-lg xl:text-lg lg:text-base text-[14px]">Nhiều nghiên cứu lâm sàng cho thấy kính Ortho K mang lại hiệu quả trong việc giảm tiến triển tật khúc xạ khoảng 50% ở trẻ và thậm chí một số trẻ có kết quả tốt hơn. Ngoài ra, kính Ortho-K có những ưu điểm sau:</div>
                 <div className="">
-                  <div className="flex justify-start items-center mt-[3%] sm:mt-[5%]" onClick={open}>
-                    <div className="p-1.5 bg_button !font-bold cursor-pointer flex items-center gap-2 sm:px-6 sm:py-3 px-5 py-2.5 shadow-lg transition-all duration-300 ease-in-out text-[13px] lg:text-[16px] rounded-full my-auto leading-none">
-                      <img src={DangKy} alt="Đăng ký" className="aspect-1" />
+                  <div className="flex md:justify-start justify-center items-center mt-[3%] sm:mt-[5%]" onClick={open}>
+                    <div className="p-1.5 bg_button !font-bold cursor-pointer flex items-center gap-2 md:px-6 md:py-3 px-3 py-2 shadow-lg transition-all duration-300 ease-in-out text-[13px] lg:text-[16px] rounded-full my-auto leading-none">
+                      <img src={DangKy} alt="Đăng ký" className="md:aspect-1 h-5 w-5" />
                       <span className="flex items-center pt-1">ĐĂNG KÝ TƯ VẤN</span>
                     </div>
                   </div>

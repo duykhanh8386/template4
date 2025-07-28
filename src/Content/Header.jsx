@@ -76,7 +76,9 @@ function Header() {
             </a></div>
           
         ))}
-          <a href="tel:19001806"><div className="bg_button flex gap-2 !font-bold items-center justify-between lg:px-2.5 lg:py-1.5 px-1.5 py-1"><img src={Phone} alt="Phone" className="bg-white lg:p-2 p-0.5  rounded-full"/>Gọi 1900 1806</div></a>
+          <a href="tel:19001806"><div className="bg_button flex gap-3 !font-bold items-center justify-between lg:px-4 lg:py-2">
+            <div className="bg-white lg:p-2  ml-[-7px] p-0.5  rounded-full"><img src={Phone} alt="Phone" className="w-full h-full"/></div>
+          Gọi 1900 1806</div></a>
        </div>
        <div className="lg1:hidden mr-4 flex relative"><FontAwesomeIcon icon={faBars} onClick={openMenu} />
                    {isOpen && (

@@ -73,7 +73,7 @@ function Section5() {
                   sm:text-[0.9vw] text-[12px] mb5:py-[0.6vw] py-[0.8vw] mb5:px-[1.5vw] shadow-lg transition-all duration-300 ease-in-out rounded-full my-auto leading-none">
                     <img src={DangKy} alt="Đăng ký" className="sm:w-[1.2vw] w-[4vw] aspect-square" />
                     <span className="pt-[0.1vw] mb5:block hidden font-bold leading-none">ĐĂNG KÝ TƯ VẤN</span>
-                    <span className="pt-[0.1vw]  mb5:hidden font-bold leading-none">ĐĂNG KÝ </span>
+                    
                   </div>
                 </div>
                 <div className=" w-[50%] mt-[15%] ml-[5%] mb2:block hidden">

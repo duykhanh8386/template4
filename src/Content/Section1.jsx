@@ -69,21 +69,21 @@ const handleChange = (e) => {
             {/* input */}
             <div className="bg_main p-[1px] mt-2 rounded-full inline-flex w-full max-w-[90%]">
 
-              <div id="focus-input" className="flex w-full items-center justify-between bg-white rounded-full px-3 lg:py-2 py-1">
+              <div id="focus-input" className="flex w-full items-center justify-between bg-white rounded-full lg:px-3 px-1.5 lg:py-2 py-1">
                 <form onSubmit={handleSubmit} onClick={handleClick} className="flex justify-between w-full"><input
                   id="input"
-                  type="tel"
+                  type="number"
                   value={phone}
                   ref={inputRef}
                   onChange={handleChange}
                   placeholder="Nhập số điện thoại..."
                   className={`outline-none 2xl:text-lg xl:text-lg lg:text-base text-sm placeholder-gray-400 bg-transparent 
-    ${error ? 'text-red-500 placeholder-red-400' : 'text-gray-700'}`}
+                   ${error ? 'text-red-500 placeholder-red-400' : 'text-gray-700'}`}
                 />
                   <button type="submit" className=" px-3 lg:py-2 py-1 4k:py-4  text-white  font-bold rounded-full bg-gradient-to-r from-[#3EED8B] to-[#0A9949]
                 2xl:text-lg  xl:text-lg lg:text-base text-sm  cursor-pointer shadow-md hover:opacity-90 transition ">
                     <div className="lg:flex justify-around gap-2 items-center hidden"><img src={MayBay} alt="MayBay" className="h-5"/> GỬI THÔNG TIN</div>
-                    <div className="flex justify-around gap-2 items-center lg:hidden"><img src={MayBay} alt="MayBay" className="h-5"/> GỬI</div>
+                    <div className="flex justify-around gap-2 items-center lg:hidden"><img src={MayBay} alt="MayBay" className="h-5 "/> GỬI</div>
                   </button></form>
               </div>
 

@@ -67,7 +67,7 @@ function Section7() {
             <div className="text-lg lg:text-xl xl:text-[22px] 2xl:text-4xl 4k:text-[38px] font-bold">Cảm nhận của khách hàng sau khi sử dụng dịch vụ</div>
           </div>
           {/* navigate */}
-          <div className="flex  gap-4 sm:mt-4 my-3 mt-2  items-center  ">
+          <div className="flex  gap-4 sm:mt-4 my-3 mt-2  items-center sm:mx-0 mx-auto">
             <button onMouseEnter={() => setHoverLeft(true)}
               onMouseLeave={() => setHoverLeft(false)}
               ref={prevRef}
@@ -80,7 +80,7 @@ function Section7() {
             <button onMouseEnter={() => setHoverRight(true)}
               onMouseLeave={() => setHoverRight(false)}
               ref={nextRef}
-              className="transition-all  hover:scale-110 p-2 cursor-pointer rounded-full bg-white text-[#6FCF97] shadow-lg flex items-center justify-center"
+              className="transition-all  hover:scale-110 p-[7px] cursor-pointer rounded-full bg-white text-[#6FCF97] shadow-lg flex items-center justify-center"
             >
               <img src={hoverright ? Right : Right1} alt="right" className="= w-7" />
             </button>
@@ -130,7 +130,7 @@ function Section7() {
 
                   {/* Avata */}
                   <div className="w-full flex justify-center mt-[-10%]">
-                    <div className="rounded-full border-2 border-white  w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] lg:w-[90px] lg:h-[90px] overflow-hidden">
+                    <div className="rounded-full border-2 border-white w-[80px] h-[80px] lg:w-[90px] lg:h-[90px] overflow-hidden">
                       <img
 
                         src={data.avt}
@@ -145,8 +145,8 @@ function Section7() {
                   <div className=" w-[95%] mx-auto text-center">
                     <div className="sm:pt-3 py-1 text-[#252525] font-bold gap-x-2 xl:text-[20px] lg:text-lg text-[18px] ">Nguyễn Minh Ánh</div>
                     <div className="aspect-auto flex justify-center"><img src={FiveStar} alt="5 sao " /></div>
-                    <div className="sm:pt-2.5 text-[#252525] font-semibold sm:text-[16px] text-sm">Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình yên và an tâm khi thăm khám tại đây!</div>
-                    <div className="sm:pt-2.5 text-[#454545]  text-center sm:text-[14px] text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit nulla etiam sed consequat dictumst viverra molestie tortor feugiat. Purus consequat, sapien diam nec. Egestas lacinia scelerisque ultrices vivamus adipiscing diam massa.</div>
+                    <div className="sm:pt-2.5 line-clamp-3 text-[#252525] font-semibold sm:text-[16px] text-sm">Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình yên và an tâm khi thăm khám tại đây!</div>
+                    <div className="sm:pt-2.5 line-clamp-4 text-[#454545]  text-center sm:text-[14px] text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit nulla etiam sed consequat dictumst viverra molestie tortor feugiat. Purus consequat, sapien diam nec. Egestas lacinia scelerisque ultrices vivamus adipiscing diam massa.</div>
                   </div>
                 </div>
               </div>

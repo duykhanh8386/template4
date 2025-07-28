@@ -54,15 +54,16 @@ function Section3() {
               </div>
               {/* text */}
               <div className="col-span-4">
-                <div className="sm:pt-3 py-1 flex items-end gap-x-2 font-bold xl:text-[20px] lg:text-lg text-[18px]">
+                <div className="sm:pt-3 py-1 flex items-center justify-between gap-x-2 font-bold xl:text-[20px] lg:text-lg text-[18px]">
                   {/* icon <mb4*/}
-                  <div className="col-span-1 block mb4:hidden relative">
-                    <div className=" bg_main justify-center aspect-[1] flex items-center rounded-tl-[40%] relative z-1 overflow-hidden rounded-br-[40%]">
+                  <div className="  relative">
+                    {item.title}
+                  </div> 
+                  <div className=" mb4:hidden bg_main justify-center aspect-[1] flex items-center rounded-tl-[40%] relative z-1 overflow-hidden rounded-br-[40%]">
                       <div className="justify-center h-full flex items-center ">
                         <img src={item.img} alt="Eye" className="z-1 h-[60%] " />
                       </div>
-                    </div>
-                  </div> {item.title}</div>
+                    </div></div>
                 <div className="text-gray-600 sm:pt-2.5 opacity-60  text-justify 2xl:text-lg xl:text-lg lg:text-base text-[14px]">Điều chỉnh độ cận, viễn và thậm chí loạn thị từ nhẹ đến nặng giúp thị lực phục hồi vào ban ngày</div>
               </div>
             </div>

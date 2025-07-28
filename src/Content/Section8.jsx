@@ -46,7 +46,7 @@ function Section8() {
       </div>
       {/* Container */}
       <div className="relative 4k:max-w-[75%] md:max-w-[80%] max-w-[95%] pb-10 z-[1] mx-auto">
-        <div className="grid sm:grid-cols-2 grid-cols-1 gap-[2%]">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-[2%]">
           {/* content left */}
           <div className="col-span-1">
             <div className="text-lg lg:text-xl  text-center xl:text-4xl 4k:text-[38px] font-bold">Những câu hỏi thường gặp</div>
@@ -74,14 +74,15 @@ function Section8() {
           {/* Content right */}
           <div>
             <div className="text-lg lg:text-xl text-center xl:text-4xl 4k:text-[38px] font-bold">Bảng giá dịch vụ gói Ortho-K</div>
-            <div className="flex justify-around gap-2 mt-[3%]">
+            <div className="flex justify-around overflow-x-scroll gap-2 mt-[3%]">
               {/* Text dep vcl */}
               {menu.map((item, index) => (
                 <div>
-                  <div className={`pb-[1.5px] p-[-2px] transition-all cursor-pointer duration-200 ease-out ${isActive[item.id] ? 'bg_main' : 'bg-white'}`}>
+                  <div className={`pb-[1.5px] p-[-2px] transition-all cursor-pointer duration-300 ease-out ${isActive[item.id] ? 'bg_main' : 'bg-white'}`}>
                     <div key={item.id} onClick={() => handleChoose(item.id, index)}
                       className={` w-full h-full pb-3 bg-white font-bold 4k:text-[18px] lg:text-[16px] text-[14px] text-sm`}>
-                      <h2 className={`${isActive[item.id] ? 'bg_main bg-clip-text text-transparent' : 'bg-white'} transition-all cursor-pointer duration-200 ease-out`}>{item.title}</h2>
+                      <h2 className={`${isActive[item.id] ? 'bg_main bg-clip-text text-transparent' : 'bg-white'}
+                      text-nowrap transition-all cursor-pointer duration-200 ease-out`}>{item.title}</h2>
                     </div>
                   </div>
                 </div>
@@ -106,7 +107,7 @@ function Section8() {
               watchSlidesProgress={true}
               watchOverflow={true}
               grabCursor={true}
-              speed={100}
+              speed={300}
               effect="slide"
               onSwiper={(swiper) => (swiperRef.current = swiper)}
               spaceBetween={'2%'}

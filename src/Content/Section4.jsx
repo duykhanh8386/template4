@@ -153,7 +153,7 @@ function Section4() {
           {image.map((img) => (
             <SwiperSlide key={img.id} className="flex items-stretch sm:!w-[250px] xl:!w-[295px] 4k:!w-[325px] !w-[200px]  shrink-0">
               <div  
-                className={`transition-all  aspect-[1] bg_main relative  w-full   flex flex-col ${img.id%2==0?'mt-[30%]':''} 
+                className={`transition-all  aspect-[1] bg_main relative  w-full   flex flex-col ${img.id%2==0?'mb4:mt-[30%] ':''} 
                   mb4:rounded-tl-[45px] mb4:rounded-tr-2xl mb4:rounded-bl-2xl mb4:rounded-br-[40px]
                    rounded-tl-[25px] rounded-tr-xl rounded-bl-xl rounded-br-[20px] pb-5
                   items-center  text-center bg-white shadow-md hover:shadow-xl border-0`}
@@ -166,7 +166,7 @@ function Section4() {
                     className="w-full mx-auto mt-[2.5%] mb4:rounded-xl rounded-[9px] rounded-tl-[22px] mb4:rounded-tl-[40px] object-cover"
                   />
                   {/* text */}
-                  <div className="text-white w-[95%] mx-auto text-left">
+                  <div className="text-white w-[95%] h-[125px] mx-auto text-left">
                     <div className="sm:pt-3 py-1 flex items-end gap-x-2 xl:text-[20px] lg:text-lg text-[18px] ">{img.title}</div>
                     <div className="sm:pt-2.5 opacity-60  text-justify xl:text-[17px] lg:text-base text-[14px]">{img.para}</div>
                   </div>
