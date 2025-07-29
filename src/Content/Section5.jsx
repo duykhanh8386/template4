@@ -69,14 +69,14 @@ function Section5() {
               {/* Button */}
               <div className="absolute z-[1]  top-[43%] lg:left-[16.5%] md:left-[16%] sm:left-[14%] mb5:left-[16%] mb2:left-[14%] mb3:left-[15%] left-[15%]">
                 <div className="flex justify-center  items-center mt-[3%] sm:mt-[5%]" onClick={open}>
-                  <div className="p-1.5 bg_button !font-bold cursor-pointer flex items-center gap-[0.5em]
-                  sm:text-[0.9vw] text-[12px] mb5:py-[0.6vw] py-[0.8vw] mb5:px-[1.5vw] shadow-lg transition-all duration-300 ease-in-out rounded-full my-auto leading-none">
+                  <div className="p-1.5 bg_button !font-bold cursor-pointer  items-center gap-[0.5em]
+                  sm:text-[0.9vw] text-[12px] mb5:flex hidden mb5:py-[0.6vw] py-[0.8vw] mb5:px-[1.5vw] shadow-lg transition-all duration-300 ease-in-out rounded-full my-auto leading-none">
                     <img src={DangKy} alt="Đăng ký" className="sm:w-[1.2vw] w-[4vw] aspect-square" />
-                    <span className="pt-[0.1vw] mb5:block hidden font-bold leading-none">ĐĂNG KÝ TƯ VẤN</span>
+                    <span className="pt-[0.1vw]  font-bold leading-none">ĐĂNG KÝ TƯ VẤN</span>
                     
                   </div>
                 </div>
-                <div className=" w-[50%] mt-[15%] ml-[5%] mb2:block hidden">
+                <div className=" w-[50%] mt-[15%] ml-[5%] mb5:block hidden">
                   <div className="mt-0.5 sm:mt-1"><img src={KeNgang} alt="KeNgang" /></div>
                   <div className="mt-0.5 sm:mt-1"><img src={KeNgang} alt="KeNgang" /></div>
                   <div className="mt-0.5 sm:mt-1"><img src={KeNgang} alt="KeNgang" /></div>

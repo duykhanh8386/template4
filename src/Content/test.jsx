@@ -23,14 +23,12 @@ function Section8() {
     { id: 4, title: "ORTHO K - 04" },
     { id: 5, title: "ORTHO K - 05" },
   ]
-  const [isOpen, setIsOpen] = useState({});
-  const handleOpen = (id) => {
-    setIsOpen((prev) => ({
-      ...prev,
-      [id]: !prev[id]
-    }))
+  const [openId, setOpenId] = useState(null);
+  const contentRefs = useRef({});
 
-  }
+  const handleToggle = (id) => {
+    setOpenId((prev) => (prev === id ? null : id));
+  };
   const [isActive, setIsActive] = useState({ 1: true });
   const handleChoose = (id, index) => {
     setIsActive({ [id]: true });
@@ -49,22 +47,42 @@ function Section8() {
         <div className="grid md:grid-cols-2 grid-cols-1 gap-[2%]">
           {/* content left */}
           <div className="col-span-1">
-            <div className="text-lg lg:text-xl  text-center xl:text-4xl 4k:text-[38px] font-bold">Những câu hỏi thường gặp</div>
-            <div className="mt-3 ">
-              {accData.map((data) => (
-                <div key={data.id} className={` sm:py-[3%] pt-[3%] text-left  border-t  ${accData.lastIndexOf ? 'border-b' : ''} border-[#EBEBEB]`}>
-                  <div onClick={() => handleOpen(data.id)} className="flex cursor-pointer justify-between items-center ">
-                    <div className=" text-[#252525] font-semibold lg:text-[18px] sm:text-[16px] text-sm">Cách phân biệt giữa cảm cúm thông thường và covid-19?</div>
-                    <div className=""><img src={isOpen[data.id] ? Tru : Cong} alt="DOng/Mo" className="" /></div>
-                  </div>
-                  <div>
-                   
-                      <div className={` ${isOpen[data.id]?"max-h-[100px]":'max-h-0' } overflow-hidden transition-all ease-in-out duration-300`}>
-                        <div className={`sm:pt-2.5 text-[#454545]  sm:text-[16px] text-xs pb-3`}>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris.
-                        </div>
-                      </div>
-                   
+            <div className="text-lg lg:text-xl text-center xl:text-4xl 4k:text-[38px] font-bold">
+              Những câu hỏi thường gặp
+            </div>
+
+            <div className="mt-3">
+              {accData.map((data, idx) => (
+                <div key={data.id} className={`border-t ${idx === accData.length - 1 ? 'border-b' : ''} border-[#EBEBEB]`}>
+                  <button
+                    onClick={() => handleToggle(data.id)}
+                    className="w-full flex justify-between items-center py-5 cursor-pointer"
+                  >
+                    <div className="text-[#252525] sm:w-full w-[85%] text-left font-semibold lg:text-[18px] sm:text-[16px] text-sm">
+                      Cách phân biệt giữa cảm cúm thông thường và covid-19?
+                    </div>
+                    <div>
+                      <img
+                        src={openId === data.id ? Tru : Cong}
+                        alt="Toggle"
+                        className="w-[18px] h-[18px] transition-transform duration-300"
+                      />
+                    </div>
+                  </button>
+
+                  <div
+                    ref={(el) => (contentRefs.current[data.id] = el)}
+                    className="overflow-hidden transition-all duration-300 ease-in-out"
+                    style={{
+                      maxHeight:
+                        openId === data.id
+                          ? `${contentRefs.current[data.id]?.scrollHeight}px`
+                          : "0px"
+                    }}
+                  >
+                    <div className="pb-5 text-sm text-[#454545]">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris.
+                    </div>
                   </div>
                 </div>
               ))}
