@@ -45,7 +45,7 @@ function Section8() {
         <img src={Circle} alt="Circle" />
       </div>
       {/* Container */}
-      <div className="relative 4k:max-w-[75%] md:max-w-[80%] max-w-[95%] pb-10 z-[1] mx-auto">
+      <div className="relative 4k:max-w-[75%] md:max-w-[80%] max-w-[95%] pb-[4%] z-[1] mx-auto">
         <div className="grid md:grid-cols-2 grid-cols-1 gap-[2%]">
           {/* content left */}
           <div className="col-span-1">
@@ -92,16 +92,16 @@ function Section8() {
             </div>
 
 
-            <Swiper loop={true}
-              modules={[Navigation, Pagination]}
-              loopedSlides={7}
+            <Swiper
+              modules={[ Pagination]}
+              
               // onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
               pagination={{
                 clickable: true,
-                el: '.custom-pagination-8',
-                dynamicBullets: true,
-                bulletClass: 'swiper-pagination-bullet',
-                bulletActiveClass: 'swiper-pagination-bullet-active',
+                // el: '.custom-pagination-8',
+                // dynamicBullets: true,
+                // bulletClass: 'swiper-pagination-bullet',
+                // bulletActiveClass: 'swiper-pagination-bullet-active',
 
               }}
               watchSlidesProgress={true}
@@ -122,9 +122,9 @@ function Section8() {
               }}
               centeredSlides={false}
 
-              slidesPerView="auto"
+              slidesPerView={1}
 
-              className="!px-0 !pb-[5%] mt-[3%] "
+              className="!px-0 !pb-[10%] mt-[3%] "
             >
 
               {[1, 2, 3, 4, 5].map((_, index) => (
@@ -138,9 +138,11 @@ function Section8() {
 
             </Swiper>
             {/* Custom pagination v1*/}
-            <div className=" relative translate-x-[-20px] xl:mt-[2%] sm:mt-0 mt-3">
-              <div className="custom-pagination-8 swiper-pagination"></div>
-            </div>
+            {/* <div className=" relative w-full xl:mt-[2%] sm:mt-0 mt-3">
+              <div className="custom-pagination-8  swiper-pagination absolute left-1/2 transform -translate-x-1/2"></div>
+            </div> */}
+             
+
           </div>
 
         </div>

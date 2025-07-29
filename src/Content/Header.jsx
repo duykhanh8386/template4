@@ -60,10 +60,10 @@ function Header() {
   }, []);
   return (
     <>
-    <div className={`w-full  fixed top-0 left-0 right-0 z-3 pb-3 transition-all duration-300 ${
+    <div className={`w-full  fixed top-0 left-0 right-0 z-3 h-[80px] flex items-center transition-all duration-300 ${
     isScrolled ? "bg-white shadow-md" : "bg-transparent"
   }`}>
-      <div className=" flex items-center 4k:max-w-[75%] sm:max-w-[80%] max-w-[95%] mx-auto lg1:justify-around justify-between h-[40px] mt-5">
+      <div className=" flex items-center 4k:max-w-[75%] sm:max-w-[80%] max-w-[95%] lg1:mx-auto w-full mx-auto lg1:justify-around justify-between">
         <div className="lg:basis-[15%] sm:basis-[30%] basis-[50%]">
           <img src={Logo} alt="Logo" className="w-[80%]" />
         </div>

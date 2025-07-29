@@ -51,7 +51,7 @@ function Section7() {
   return (
     <>
       {/* Background color */}
-      <div className="w-full grid grid-cols-2 gap-[2%] sm:mt-[6%] mt-[3%] relative z-0">
+      <div className="w-full grid grid-cols-2 gap-[2%] sm:mt-[6%] mt-[10%] relative z-0">
         <div className="sm:col-span-1 col-span-2 aspect-[4/3] bg-gradient-to-t from-[var(--main-gradient-from)] to-[var(--main-gradient-to)] 
       sm:rounded-tl-[43.6%] rounded-tl-[23.6%] rounded-tr-[1.25%] sm:rounded-br-[43.6%] rounded-br-[23.6%] rounded-bl-[1.25%]">
         </div>
@@ -60,7 +60,7 @@ function Section7() {
         </div>
       </div>
       {/* Title + thanh dieu huong */}
-      <div className="relative 4k:max-w-[75%] md:max-w-[80%] max-w-[95%] sm:mt-[-30%] mt-[-65%] z-[1] mx-auto">
+      <div className="relative 4k:max-w-[75%] md:max-w-[80%] max-w-[95%] md:mt-[-30%] sm:mt-[-25%] mt-[-60%] z-[1] mx-auto">
         {/* Decor */}
         <div className="flex justify-between items-center sm:flex-nowrap flex-wrap">
           <div className="sm:max-w-[40%] max-w-full text-white">

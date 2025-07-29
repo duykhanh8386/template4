@@ -61,7 +61,7 @@ function Section9() {
   }
   return (
     <>
-      <div style={{ backgroundImage: `url(${Bg})` }} className="w-full xl:py-[2%]  4k:py-[5%] lg:py-[1.5%] md:py-[3%] bg-cover flex items-center justify-items-start lg:mt-[5%] mt-[10%]">
+      <div style={{ backgroundImage: `url(${Bg})` }} className="w-full xl:py-[2%] min-h-[100px] mb4:min-h-[170px] sm:min-h-[220px] 4k:py-[5%] lg:py-[1.5%] md:py-[3%] bg-cover flex items-center justify-items-start lg:mt-[5%] ">
         
         {/* Form */}
 
@@ -73,7 +73,7 @@ function Section9() {
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-green-400 to-blue-400 mb4:px-6 mb4:py-4 px-3 py-2 pb-0 lg:pb-2">
-              <h2 className="text-white text-lg font-bold">Đăng ký tư vấn miễn phí</h2>
+              <h2 className="text-white text-sm font-bold">Đăng ký tư vấn miễn phí</h2>
               <p className="text-white text-sm xl:block lg:hidden sm:block hidden">
                 Đặt hẹn ngay để nhận tư vấn và chúng tôi sẽ xếp lịch khám kịp thời!
               </p>
@@ -85,7 +85,7 @@ function Section9() {
                   type="submit"
                   className=" bg-white hover:bg-gradient-to-r hover:from-green-400 hover:to-blue-400 text-[14px] font-semibold mb4:py-2 mb4:px-6 px-3 py-1 rounded-full hover:opacity-90 transition-all"
                 >
-                  <h2 className="bg-gradient-to-r from-green-400 to-blue-400 text-transparent bg-clip-text hover:text-white">GỬI YÊU CẦU</h2>
+                  <h2 className="bg-gradient-to-r text-[12px] from-green-400 to-blue-400 text-transparent bg-clip-text hover:text-white">GỬI YÊU CẦU</h2>
                 </button></div>
             </div>
 
@@ -185,7 +185,7 @@ function Section9() {
                 <div >
                   <button
                     type="submit"
-                    className="bg-gradient-to-r w-full from-green-400 to-blue-400 text-white font-semibold py-2 px-6 rounded-full hover:opacity-90 transition-all"
+                    className="bg-gradient-to-r w-full cursor-pointer from-green-400 to-blue-400 text-white font-semibold py-2 px-6 rounded-full hover:opacity-90 transition-all"
                   >
                     GỬI YÊU CẦU
                   </button>
