@@ -61,7 +61,7 @@ function Section9() {
   }
   return (
     <>
-      <div style={{ backgroundImage: `url(${Bg})` }} className="w-full xl:py-[2%] min-h-[100px] mb4:min-h-[170px] sm:min-h-[220px] 4k:py-[5%] lg:py-[1.5%] md:py-[3%] bg-cover flex items-center justify-items-start lg:mt-[5%] ">
+      <div style={{ backgroundImage: `url(${Bg})` }} className="w-full xl:py-[2%] min-h-[100px] mb4:min-h-[170px] sm:min-h-[220px] 4k:py-[5%] lg:py-[1.5%] md:py-[3%] bg-cover flex items-center justify-items-start lg:mt-[0%] ">
         
         {/* Form */}
 
