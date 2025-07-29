@@ -215,7 +215,7 @@ function Footer(){
       </div>
       {
         isOpen3&&(
-          <div className={`grid grid-cols-5 gap-4 col-span-5 items-center  transition-all duration-300 ease-in-out transform ${isAnimating3 ? 'translate-y-0 opacity-100' : 'translate-y-[-30px] opacity-0'}`}>
+          <div className={`grid grid-cols-5 gap-4 sm:hidden col-span-5 items-center  transition-all duration-300 ease-in-out transform ${isAnimating3 ? 'translate-y-0 opacity-100' : 'translate-y-[-30px] opacity-0'}`}>
         <div className="col-span-3 sm:col-span-4 lg:col-span-5 flex gap-4">
         <a href="#" className="w-10 h-10 border bg-white rounded-full flex items-center justify-center">
           <img src={Facebook} alt="Facebook" />
